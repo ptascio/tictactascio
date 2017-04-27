@@ -9,6 +9,9 @@ To communicate this to the browser, I created an ```ul``` and within that create
 #### ```li```
 Each ```li``` needs to have a correlation to the board in the JS file. In order to keep track of this, I gave each ```li``` an x and a y attribute which are the indices of the element board array. When a player changes a space to an ```X``` or ```O``` in the browser the board array gets updated according to the indices referenced through the x and y attributes. A player can only change the contents of an ```li``` if the ```innerHTML``` is a blank string.
 
+## Reset Play
+At any point players can reset the game by clicking the ```New Game``` button. This makes use of the window's ```reload()``` function and refreshes the page. 
+
 ## Count and Play
 #### Count
 In order to win at Tic Tac Toe a minimum of 5 moves need to be played. To keep track of this, I created a ```count``` variable. If ```count >= 5```, then I ran my functions designed to check if someone has won the game yet. The ```count``` variable also came in handy to alternate between ```X``` and ```O``` markers.
