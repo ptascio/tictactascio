@@ -10,7 +10,7 @@ To communicate this to the browser, I created an ```ul``` and within that create
 Each ```li``` needs to have a correlation to the board in the JS file. In order to keep track of this, I gave each ```li``` an x and a y attribute which are the indices of the element board array. When a player changes a space to an ```X``` or ```O``` in the browser the board array gets updated according to the indices referenced through the x and y attributes. A player can only change the contents of an ```li``` if the ```innerHTML``` is a blank string.
 
 ## Reset Play
-At any point players can reset the game by clicking the ```New Game``` button. This makes use of the window's ```reload()``` function and refreshes the page. 
+At any point players can reset the game by clicking the ```New Game``` button. This makes use of the window's ```reload()``` function and refreshes the page.
 
 ## Count and Play
 #### Count
@@ -34,7 +34,8 @@ Checking for a horizontal victory was easy enough. I just iterated through my bo
 A vertical victory is a touch more challenging to check for. I chose to create a ```verticalBoard``` variable which holds an array. I then iterated through the board using 2 while loops and populated the ```verticalBoard``` with the appropriate elements form the board. I then check if ```verticalBoard``` is all ```X```s or all ```O```s and reset the ```verticalBoard``` to an empty array after each check. Because the length of ```board``` never changes, I chose to just hard code the conditional within each while loop.
 
 #### Diagonally
-Since there are only 2 ways in which a player can win Diagonally I chose to hard code them as 2 different arrays and check each one.
+Since there are only 2 ways in which a player can win Diagonally I chose to hard code them as 2 different arrays and check each one for all ```X```s or
+all ```O```s.
 
 ## CSS
 I use some simple CSS techniques to alert players to the state of the game. If a space is available, the background will change color and the cursor will change to pointer upon hover. Similarly, if a player would like to reset the game the New Game text within the button will grow when hovered over.
